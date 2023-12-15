@@ -1,0 +1,10 @@
+------------------------15 GRUDNIA------------------------
+cniol ma w githb
+
+create table company(
+id SERIAL,
+nazwa varchar(100),
+miasto set ('Bydgoszcz', 'Gliwice', 'Ciechocinek', 'Warszawa', 'Kraków', 'Gdynia'),
+typ set ('Kurierska', 'Budowlana', 'Energetyczna', 'Inna')    
+
+    );
