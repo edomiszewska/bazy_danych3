@@ -1,6 +1,7 @@
 ------------------------15 GRUDNIA------------------------
 cniol ma w githb
 
+zad 22
 create table company(
 id SERIAL,
 nazwa varchar(100),
@@ -8,3 +9,53 @@ miasto set ('Bydgoszcz', 'Gliwice', 'Ciechocinek', 'Warszawa', 'Kraków', 'Gdyni
 typ set ('Kurierska', 'Budowlana', 'Energetyczna', 'Inna')    
 
     );
+
+=================
+create table towary(
+id SERIAL,
+nazwa varchar(255),
+przyjecie timestamp    
+);
+
+insert into towary(nazwa) values('Mleko');
+insert into towary(nazwa) values('Smietana');
+insert into towary(nazwa) values('Ser');
+insert into towary(nazwa) values('Jogurt');
+==================
+
+zad 23
+update na podobienstwo, stworz tabele i uzyj innego typu czasu
+
+create table slodkosci(
+id SERIAL,
+nazwa_produktu varchar(255),
+data_przyjecia date,
+smak set ('truskawkowy', 'czekoladowy', 'śmietankowy', 'waniliowy'));
+
+insert into slodkosci(nazwa_produktu, data_przyjecia, smak) values('ciastko', '2023-12-07', 'waniliowy');
+
+update slodkosci set nazwa_produktu='ciastko milka' where id=2;
+
+
+zad 24
+stworz trzy tabele wykorzystujac poznana wiedze na temat daty i czasu
+(jeszcze 2)
+
+create table ryby(
+id SERIAL,
+nazwa varchar(255),
+rok_przyjecia year,
+rodzaj set ('makrela', 'łosoś', 'śledź', 'karp'));
+
+insert into ryby(nazwa, rok_przyjecia, rodzaj) values ('brzuszki łososia', '2023', 'łosoś');
+
+
+
+create table zabawki(
+id SERIAL,
+nazwa varchar(255),
+data_produkcji datetime,
+rodzaj set ('lalka', 'miś', 'lego', 'samochodziki'));
+
+insert into zabawki(nazwa, data_produkcji, rodzaj) values ('lagoona', '2023-12-07 14:16:01', 'lalka'); 
+itd.
